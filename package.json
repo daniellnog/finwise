@@ -1,5 +1,5 @@
 {
-  "name": "my-monorepo",
+  "name": "finwise",
   "private": true,
   "scripts": {
     "build": "turbo build",

@@ -1,6 +1,7 @@
 import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
+import React from "react";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
@@ -37,6 +38,10 @@ export default function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
+
+        <p>
+          new paragraph
+        </p>
 
         <div className={styles.ctas}>
           <a
