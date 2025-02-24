@@ -7,11 +7,16 @@ export function openDb() {
 
 export function initDb() {
   const db = openDb();
+
+  // Criar a tabela se não existir
   db.exec(`
     CREATE TABLE IF NOT EXISTS users (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT,
-      email TEXT UNIQUE
+      email TEXT UNIQUE,
+      created_at TEXT DEFAULT (datetime('now')), 
+      username TEXT UNIQUE,
+      password TEXT
     );
   `);
 }
